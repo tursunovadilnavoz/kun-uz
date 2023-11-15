@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .c{
+            margin: 0 50px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+        }
+        
+        
+        .header a{
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            top: 5px;
+            padding-left: 20px;
+            font-size: 14px;
+            font-weight: 900;
+        }
+        select{
+            width: 100px;
+            height: 30px;
+            border-radius: 18px;
+            border: none;
+            background-color:#E7E7E7;
+            outline: none;
+            position: relative;
+            left: 100px;
+        }
+        .image img{
+            width: 100%;
+        }
+        option{
+            outline: none;
+            border-radius: 18px;
+            border: none;
+        }
+        .ss{
+            position: relative;
+            right: 20px;
+        }
+        .IMG img{
+            position: relative;
+            left: 28px;
+        }
+        .ll {
+            padding: 20px;
+            background-color: #17206a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    left: -60px;
+    top: -10px;
+
+        }
+        .ll a{
+            position: relative;
+            left: 5px;
+            color: #fff;
+        }
+        
+        .header-page a{
+            text-decoration: none;
+            position: relative;
+            top: -20px;
+            right: 30px;
+        }
+      .header-page .ll a::after{
+        content: " ";
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 20px 0 20px 12px;
+    border-color: transparent transparent transparent #17206a;
+      }
+        li a{
+            font-size: 12px;
+    color: #585858;
+    display: flex;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    line-height: 40px;
+    white-space: nowrap;
+        }
+        .list{
+            width:100%;
+    padding: 10px;
+    padding-left: 60px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    height: 43px;
+    background-color: #f0f0f0;
+}
+    .list li::before{
+        content: " ";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #585858;
+    margin: 0 37px;
+    position: relative;
+    top: 5px;
+    } 
+    .header i{
+        display: none;
+    }
+    .big-news {
+    width:450px;
+    height: 330px;
+    display: flex;
+    background-color: #eff2f8;
+    position: relative;
+    top: 10px;
+}
+    a {
+    text-decoration: none;
+    }
+    .big-news__img img {
+    width:450px;
+    height: 330px;
+    position: relative;
+    margin: 10px 0;
+    overflow: hidden;
+    }
+    .big-news__content {
+    width: 450px;
+    padding: 25px;
+    overflow: hidden;
+    position: relative;
+    float: right;
+    }
+    .news-meta {
+    margin-bottom: 10px;
+    opacity: 0.8;
+    color: #000000;
+    font-size: 12px;
+    padding-left: 20px;
+    background: url(calendar.png) no-repeat center left;
+    background-size: contain;
+    }
+    .big-news__title {
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    font-weight: bold;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+    display: block;
+    }
+    .big-news__description {@media (max-width: 767px) {
+                body,html {
+                    overflow-x:hidden;
+                }
+            }
+
+            ::selection {
+                background: var(--c-main);
+                color: #fff;
+            }
+
+            img::selection {
+                background: transparent;
+            }
+
+            :root {
+                --admin-bar-h: 32px;
+            }
+
+            @media (max-width: 782px) {
+                :root {
+                    --admin-bar-h:46px;
+                }
+            }
+
+            *,:before,:after {
+                -webkit-font-smoothing: antialiased;
+            }
+
+            p {
+                margin-bottom: 21px;
+                word-break: break-all;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+
+            h1 {
+                font-size: 1.846em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.285em;
+            }
+
+            h4 {
+                font-size: 1.21em;
+            }
+
+            h5 {
+                font-size: 1.107em;
+            }
+
+            h1,h2,h3,h4,h5,h6 {
+                font-weight: var(--title-fw-bold);
+                font-family: var(--h-font);
+                color: var(--c-headings);
+            }
+
+            a {
+                color: var(--c-a,var(--c-links));
+                text-decoration: none;
+                transition: all .25s ease-in-out;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: var(--c-a-hover,var(--c-main));
+            }
+
+            small {
+                font-size: .92308em;
+            }
+
+            ul,ol {
+                list-style-type: var(--ul-style,none);
+                margin: var(--ul-margin,0);
+                margin-left: var(--ul-ml,0);
+            }
+
+            @media (max-width: 540px) {
+                ul,ol {
+                    margin-left:var(--ul-ml-xs,0);
+                }
+            }
+
+            li {
+                padding: var(--li-padding,0);
+                padding-left: var(--li-pl,0);
+                margin: var(--li-margin,0);
+                margin-bottom: var(--li-mb,0);
+            }
+
+            input,textarea,select {
+                border: 1px solid var(--c-contrast-150);
+                padding: 7px 12px;
+                outline: 0;
+                height: auto;
+                font-size: 14px;
+                color: var(--c-contrast-500);
+                max-width: 100%;
+                border-radius: 2px;
+                box-shadow: 0 2px 7px -4px rgba(0,0,0,.1);
+                background: var(--c-input-bg,var(--c-contrast-0));
+            }
+
+            input {
+                width: var(--input-width,initial);
+                height: var(--input-height,38px);
+            }
+
+            input[type=checkbox],input[type=radio] {
+                width: initial;
+                height: initial;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 14px 12px;
+                line-height: 1.5;
+            }
+
+            input:focus,textarea:focus,select:focus {
+                border-color: var(--c-contrast-400);
+                color: var(--c-contrast-650);
+            }
+
+            input[type=submit],button,input[type=reset] input[type=button],.ts-button {
+                padding: var(--btn-pad,0 17px);
+                font-family: var(--ui-font);
+                font-size: var(--btn-f-size,12px);
+                font-weight: var(--btn-f-weight,600);
+                line-height: var(--btn-l-height,var(--btn-height));
+                height: var(--btn-height);
+                letter-spacing: .03em;
+                text-transform: uppercase;
+                text-align: center;
+                box-shadow: var(--btn-shadow);
+                transition: .25s ease-in-out;
+                background: var(--c-main);
+                color: #fff;
+                border: 0;
+                border-radius: 2px;
+            }
+            font-size: 15px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #000000;
+    display: block;
+    } 
+    .col-md-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.block-title span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    padding-left: 25px;
+}
+.news-lenta__title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #000000;
+    transition: .2s ease;
+}
+.col-md-3{
+    flex: 0 0 25%;
+     width: 350px;
+}
+.col-md-3{
+    position: relative;
+    left: 910px;
+    top: -340px;
+}
+.main-btn-v2 {
+    height: 60px;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: url(https://kun.uz/assets/99110d40/img/silver-arrow-right.svg) no-repeat 92% center #f0f0f0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    border-left: 2px solid #2246c5;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}     
+.small-news__img img {
+    width: 175px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    }
+    .col-md-6 {
+        width: 450px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    bottom: 840px;
+    /* display: flex !important; */
+    }
+    .div1{
+        width: 100%;
+        display: flex;
+        position: relative;
+        left: -10px;
+    }
+    .div2{
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 25px;
+        position: relative;
+        left: -10px;
+    }
+    .small-news__title {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+    line-height: 20px;
+    width: 100px;
+    }
+    .flex{
+        position: relative;
+        top: 20px;
+    }
+    .small-news__content {
+    border-bottom: 1px solid #cecece;
+    padding-left: 0;
+    margin-left: 15px;
+    padding-bottom: 18px;
+    }
+    .small-news{
+        display: flex;
+    } 
+    .block-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.news__img img {
+    width: 250px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 12px;
+}
+.news__img{
+    display: flex;
+}
+.im{
+    display: flex;
+}
+.col-md-4{
+    width: 320px;
+}
+.editor-choice{
+    position: relative;
+    top: -780px;
+}  
+.news .news__title {
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 66px;
+}
+.news__title {
+    font-size: 20px;
+    line-height: 26px;
+    color: #000;
+    font-weight: 700;
+}
+.home-page_section{
+    position: relative;
+    width: 100%;
+    top: -730px;
+}
+.big-new__title{
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    font-weight: bold;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+    display: block;
+    width: 600px;
+}
+.p{
+    width: 600px;
+}
+.big-pictute{
+    width: 60%;
+    float: left;
+}
+.small-picture__section{
+    width: 48%;
+    float: right;
+    position: relative;
+    bottom: 539px;
+}
+.big-new__title2{
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    font-weight: bold;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+    display: block;
+    width: 300px; 
+}
+.small-picture__section2{
+    width: 48%;
+    float: right;
+    position: relative;
+    bottom: 539px;
+}
+.section_image{
+    margin: 200px 20px 0 0 ;
+}
+.section_image::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 518px;
+    left: 48px;
+    width: 250px;
+    height: 158px;
+    background: #0d1b8c;
+    z-index: 1;
+}
+.section_image2{
+    margin: 200px 20px 0 0 ;
+}
+.section_image2::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 518px;
+    left: 368px;
+    width: 250px;
+    height: 158px;
+    background: #0d1b8c;
+    z-index: 1;
+}
+.section_image3{
+    margin: 200px 20px 0 0 ;
+}
+.section_image3::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 518px;
+    left: 688px;
+    width: 250px;
+    height: 158px;
+    background: #0d1b8c;
+    z-index: 1;
+}
+.section_image4{
+    margin: 200px 20px 0 0 ;
+}
+.section_image4::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 518px;
+    left: 1009px;
+    width: 250px;
+    height: 158px;
+    background: #0d1b8c;
+    z-index: 1;
+}
+.block-word {
+    font-size: 28px;
+    color: #e3e3e3;
+    font-weight: 700;
+    position: absolute;
+    left: 245px;
+    height: 35px;
+    width: 160px;
+    top: 120px;
+    transform: rotate(-90deg);
+    display: block;
+    z-index: 3;
+}
+.block-word2 {
+    font-size: 28px;
+    color: #e3e3e3;
+    font-weight: 700;
+    position: absolute;
+    left: 565px;
+    height: 35px;
+    width: 160px;
+    top: 120px;
+    transform: rotate(-90deg);
+    display: block;
+    z-index: 4;
+}.block-word3 {
+    font-size: 28px;
+    color: #e3e3e3;
+    font-weight: 700;
+    position: absolute;
+    left: 885px;
+    height: 35px;
+    width: 160px;
+    top: 120px;
+    transform: rotate(-90deg);
+    display: block;
+    z-index: 3;
+}.block-word4 {
+    font-size: 28px;
+    color: #e3e3e3;
+    font-weight: 700;
+    position: absolute;
+    left: 1207px;
+    height: 35px;
+    width: 160px;
+    top: 120px;
+    transform: rotate(-90deg);
+    display: block;
+    z-index: 3;
+}
+.post-title {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 23px;
+    color: #000;
+    font-weight: 700;
+    z-index: 2;
+    width: 300px;
+    position: relative;
+    top: -140px;
+    left: 70px;
+}
+.white{
+    width: 270px;
+    height: 260px;
+    background-color: white;
+    position: relative;
+    top: -400px;
+    left: 70px;
+    z-index: 1;
+}
+.image-div::after{
+    content: " ";
+    display: block;
+    position: relative;
+    top: -390px;
+    right: -15px;
+    width: 550px;
+    height: 330px;
+    background-color:#fff;
+    z-index: -1;
+}
+.div-ekan{
+    width: 600px;
+    height: 400px;
+    background:#f0f0f0;
+    padding-right: 55px;
+    z-index: -2;
+    position: relative;
+    top: 440px;
+}
+.maqolaa{
+    display: flex;
+}
+.maqola{
+    margin: 25px;
+    position: relative;
+    bottom: 1000px;
+}
+@media(max-width:769px){
+     .c{
+       margin: 0 20px;
+     }
+     .ss{
+        display:none;
+        font-size:1px;
+        position: relative;
+        left: 10px;
+     }
+     select{
+        position: relative;
+        left: 280px;
+        width: 100px;
+     }
+     .IMG img{
+        width: 25px;
+        position: relative;
+        left: 158px;
+        top: 2px;
+     }
+     .icon img{
+        position: relative;
+        left: 80px;
+        width: 27px;
+        top: 1px;
+     }
+     .header i{
+        display: block;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        color: #817e7e;
+     }
+     .header-page{
+        width: 640px;
+     }
+    }
+  @media(max-width:769px){
+    .a{
+        display: block;
+    }
+    .big-news__img img{
+        width: 640px;
+        display: block;
+    }
+    .big-news{
+        width: 800px;
+        height: 300px;
+        position: relative;
+        top: 340px;
+        left: -640px;
+        display: flex;
+        align-items: center;
+    }
+    .big-news__content{
+        width: 640px;
+        
+    }
+    .col-md-3{
+        width: 640px;
+        position: relative;
+        left: 1px;
+        top: 300px;
+        background-color: #f0f0f0;
+    }
+    .news-lenta{
+        width: 640px;
+    }
+    .col-md-6{
+        position: relative;
+        top: 300px;
+        display: block;
+        margin:6px 0;
+        width: 640px;
+    }
+    .div1{
+        display: block;
+    }
+    .div2{
+        display: block;
+        position: relative;
+        top: -1px;
+    }
+    .im{
+    display: block;
+}
+.editor-choice{
+    position: relative;
+    top: 350px;
+}
+.col-md-4{
+    width: 640px;
+}
+.news__img img{
+    width: 640px;
+}
+.home-page_section{
+    position: relative;
+    top: 400px;
+    width: 640px;
+}
+.small-picture__section{
+    width: 640px;
+    float: left;
+}
+.small-picture__section{
+    display: block !important;
+    position: relative;
+    top: 20px;
+}
+.big-picture img{
+    width: 640px !important;
+}
+.top_picture img{
+    width: 640px !important;
+    margin: 20px 0;
+    position: relative;
+}
+.big-new__title2{
+    width: 640px;
+}
+.t2{
+    position: relative;
+    left: -20px;
+}
+.t3{
+    position: relative;
+    left: -590px;
+    top: 260px;
+}
+.t4{
+    position: relative;
+    left: -610px;
+    top: 250px;
+}
+.aside{
+    position: relative;
+    top: 2250px !important;
+    width: 640px !important;
+    height: 80vh !important;
+}
+.white{
+    width: 530px;
+    height: 400px;
+    top: -580px !important;
+}
+.aside .block-title{
+    position: relative;
+    left: -600px;
+}
+.x{
+    display: grid;
+    grid-template-columns: 1fr !important;
+}
+.section_image{
+    position: relative;
+    left: -570px;
+    top: -50px;
+}
+.section_image2{
+    display: none;
+}
+.section_image3{
+    display: none;
+}
+.section_image4{
+    display: none;
+}
+.block-word{
+    position: relative;
+    left: 490px;
+    top: -310px;
+}
+.post-title{
+    width: 530px;
+    position: relative;
+    top: -200px;
+}
+.section_image::after{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: -990px !important;
+}
+.section_image img{
+    width: 500px !important;
+}
+.another-page .block-title{
+    display: block;
+    width: 140px;
+}
+.another-page{
+    position: relative;
+    top: -1760px !important;
+}
+.image-div{
+  position: relative;
+  left: -29px;
+}
+.flex-image{
+    display: block !important;
+    position: relative;
+   
+}
+.flex-image img{
+    display: block;
+    position: relative;
+    
+}
+.two-image-div{
+    position: relative;
+    top: 100px;
+    display: block;
+}
+.two-image-div img{
+    width: 650px !important;
+    position: relative;
+    left: -320px;
+}
+  }
+  @media(max-width:415px){
+     .c{
+       margin: 0 5px;
+     }
+     .ss{
+        display:none;
+        font-size:1px;
+        position: relative;
+        left: 10px;
+     }
+     select{
+        position: relative;
+        left: 110px;
+        width: 100px;
+     }
+     .IMG img{
+        width: 25px;
+        position: relative;
+        left: 48px;
+        top: 2px;
+     }
+     .icon img{
+        position: relative;
+        left: 22px;
+        width: 27px;
+        top: 1px;
+     }
+     .header i{
+        display: block;
+        position: relative;
+        left: -1px;
+        top: 5px;
+        color: #817e7e;
+     }
+     .header-page{
+        width: 640px;
+     }
+     .header-page .ll a::after{
+        right: -16.5px;
+     }
+    }
+  @media(max-width:415px){
+    .a{
+        display: block;
+    }
+    .big-news__img img{
+        width: 392px;
+        display: block;
+    }
+    .big-news{
+        width: 800px;
+        height: 300px;
+        position: relative;
+        top: 340px;
+        left: -392px;
+        display: flex;
+        align-items: center;
+    }
+    .big-news__content{
+        width: 392px;
+        position: relative;
+        left: -10px;
+        
+    }
+    .col-md-3{
+        width: 392px;
+        position: relative;
+        left: 1px;
+        top: 300px;
+        background-color: #f0f0f0;
+    }
+    .news-lenta{
+        width: 392px;
+    }
+    .col-md-6{
+        position: relative;
+        top: 300px;
+        display: block;
+        margin:6px 0;
+        width: 392px;
+    }
+    .col-md-6 img{
+        width: 392px;
+    }
+    .small-news{
+        display: block;
+    }
+    .small-news__content{
+        width: 392px;
+        margin: 3px 0;
+    }
+    .div1{
+        display: block;
+    }
+   
+    .div2{
+        display: block;
+        position: relative;
+        top: -1px;
+    }
+    .im{
+    display: block;
+}
+.editor-choice{
+    position: relative;
+    top: 350px;
+}
+.col-md-4{
+    width: 392px;
+}
+.news__img img{
+    width: 392px;
+}
+.home-page_section{
+    position: relative;
+    top: 400px;
+    width: 392px;
+}
+.small-picture__section{
+    width: 392px;
+    float: left;
+}
+.small-picture__section{
+    display: block !important;
+    position: relative;
+    top: 20px;
+}
+.big-picture img{
+    width: 392px !important;
+}
+.top_picture img{
+    width: 392px !important;
+    margin: 20px 0;
+    position: relative;
+}
+.big-new__title2{
+    width: 392px;
+}
+.t2{
+    position: relative;
+    left: -20px;
+}
+.t3{
+    position: relative;
+    left: -590px;
+    top: 260px;
+}
+.t4{
+    position: relative;
+    left: -610px;
+    top: 250px;
+}
+  }
+    </style>
+</head>
+<body>
+<div class="c">
+    <div class="image">
+        <img src="https://avatars.mds.yandex.net/get-adfox-content/2788782/231102_adfox_1749280_7906372.a03e02a0a93eb4196c6f0a6beab92ba0.png/optimize.webp" alt="">
+    
+    </div>
+        <div class="header">
+            <div class="img">
+                <img src="https://kun.uz/assets/3d48c862/img/kun-uz-logo.svg" alt="">
+            </div>
+           <div class="ss">
+          <span> <a href="#">ЎЗБЕКИСТОН</a></span>
+          <span> <a href="#">ЖАҲОН</a></span>
+          <span> <a href="#">ИҚТИСОДИЁТ</a></span>
+          <span> <a href="#">ЖАМИЯТ</a></span>
+          <span> <a href="#">ФАН-ТЕХНИКА</a></span>
+          <span> <a href="#">СПОРТ</a></span>
+          <span> <a href="#">НУҚТАЙИ НАЗАР</a></span>
+          <span> <a href="#">
+            АУДИО</a></span>
+          
+           </div>
+            <select>
+                <option>
+                    O'zbekcha
+                </option>
+                <option>
+                    O'zbekcha
+                </option>
+                <option>
+                    O'zbekcha
+                </option>
+                <option>
+                    O'zbekcha
+                </option>
+            </select>
+    <div class="IMG">     <img src="https://kun.uz/assets/99110d40/img/toggle-circle-v2.svg" alt="">
+    </div>
+           <div class="icon">
+            <img src="https://kun.uz/assets/3d48c862/img/new-search-icon.svg" alt="">
+           </div>
+           <i class="fa-solid fa-list"></i>
+           <!-- <div class="drop">
+            <span> <a href="#">ЎЗБЕКИСТОН</a></span>
+            <span> <a href="#">ЖАҲОН</a></span>
+            <span> <a href="#">ИҚТИСОДИЁТ</a></span>
+            <span> <a href="#">ЖАМИЯТ</a></span>
+            <span> <a href="#">ФАН-ТЕХНИКА</a></span>
+            <span> <a href="#">СПОРТ</a></span>
+            <span> <a href="#">НУҚТАЙИ НАЗАР</a></span>
+            <span> <a href="#">
+              АУДИО</a></span>
+              </div> -->
+           </div>
+       
+           <div class="header-page">
+             
+             <ul class="list">
+                <div class="ll">
+                 <a href="#">Ҳудудлар</a>
+                </div>
+                 <li><a href="#">
+                     Тошкент ш.</a></li>
+                     <li><a href="#">
+                         Тошкент ш.</a></li>
+                         <li><a href="#">
+                             Тошкент ш.</a></li>
+                             <li><a href="#">
+                                 Тошкент ш.</a></li>
+                                 <li><a href="#">
+                                     Тошкент ш.</a></li>
+                                     <li><a href="#">
+                                         Тошкент ш.</a></li>
+                                         <li><a href="#">
+                                             Тошкент ш.</a></li>
+                                             <li><a href="#">
+                                                 Тошкент ш.</a></li>
+                                                 <li><a href="#">
+                                                     Тошкент ш.</a></li>
+                                                     <li><a href="#">
+                                                         Тошкент ш.</a></li>
+                                                         <li><a href="#">
+                                                             Тошкент ш.</a></li>
+                                                             <li><a href="#">
+                                                                 Тошкент ш.</a></li>
+                                                                 <li><a href="#">
+                                                                     Тошкент ш.</a></li>
+                                                                     <li><a href="#">
+                                                                         Тошкент ш.</a></li>
+                                                                     
+             </ul>
+            </div>
+           <div class="a" style="display: flex;">
+             <span class="big-news__img"><img src="https://storage.kun.uz/source/thumbnails/_medium/10/tTb5IGXZpWGIyDChOoH8OwGELDve8byd_medium.jpg" style="background-position: center;"></span>
+             <a class="big-news" href="https://storage.kun.uz/source/thumbnails/_medium/10/tTb5IGXZpWGIyDChOoH8OwGELDve8byd_medium.jpg">
+                <span class="big-news__content">
+                  <div class="news-meta"><span>14:23 / 06.11.2023</span></div><span class="big-news__title">Ўзбекистоннинг 9 ҳудудида сел-сув тошқини хавфи эълон қилинди</span>
+                  <span class="big-news__description">8-9 ноябр кунлари республика ҳудудида кучли ёмғирлар ёғиши кутиляпти.</span>
+                </span>
+            </a>
+             </div>
+             <div class="col-md-3">
+               <a href="/news/list" class="block-title"><span>Сўнгги  янгиликлар</span></a>
+               <div class="mb-25">
+                                       <a class="news-lenta" href="/news/2023/11/04/erdogan-endi-netanyahu-bilan-muloqot-qilmasligini-aytdi">
+                                                   <div class="news-meta"><span>19:06</span></div>
+                                                   <span class="news-lenta__title"> Эрдўған энди Нетаняҳу билан мулоқот қилмаслигини айтди</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/rossiyadan-ozbekistonga-neft-yetkazib-berish-hajmi-oshiriladi">
+                                                   <div class="news-meta"><span>18:24</span></div>
+                                                   <span class="news-lenta__title"> Россиядан Ўзбекистонга нефт етказиб бериш ҳажми оширилади</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/2024-yil-budjeti-dollarning-yangi-marrasi-va-xususiy-sektorga-otadigan-suv-taminoti-iqtisodiy-taymlayn">
+                                                   <div class="news-meta"><span>18:02</span></div>
+                                                   <span class="news-lenta__title"> 2024 йил бюджети, долларнинг янги марраси ва хусусий секторга ўтадиган сув таъминоти — иқтисодий таймлайн</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/avdiyivka-uchun-jang-rossiyaning-donetsk-atrofidagi-yirik-yurishi-nimani-anglatadi">
+                                                   <div class="news-meta"><span>17:31</span></div>
+                                                   <span class="news-lenta__title"> Авдийивка учун жанг: Россиянинг Донецк атрофидаги йирик юриши нимани англатади?</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/ishonch-yorligi-nega-jstga-kirish-kerak">
+                                                   <div class="news-meta"><span>17:15</span></div>
+                                                   <span class="news-lenta__title"> Ишонч ёрлиғи. Нега ЖСТга кириш керак?</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/bolalar-chegaralarni-buzmagan-yosh-spotterlar-iio-tomonidan-ushlanganiga-uzbekistan-airports-munosabat-bildirdi">
+                                                   <div class="news-meta"><span>16:25</span></div>
+                                                   <span class="news-lenta__title"> Тошкентда ёш споттерлар қўлга олинди, Uzbekistan Airports муносабат билдирди</span>
+                                                 </a><br><br>
+                                       <a class="news-lenta" href="/news/2023/11/04/buldozer-yoki-killdozer-amerikalik-tadbirokr-oziga-nohaqlik-qilgan-kompaniya-va-shahar-mamuriyati-binosini-nega-buzgandi">
+                                                   <div class="news-meta"><span>16:08</span></div>
+                                                   <span class="news-lenta__title"> Булдозер ёки «Killdozer» - америкалик тадбиркор ўзига ноҳақлик қилган компания ва шаҳар маъмурияти биносини нега бузганди?</span>
+                                                 </a><br><br>
+                                                
+                                                <a class="news-lenta" href="/news/2023/11/04/aqsh-qamoqxonalarida-mahbuslar-nimadan-pul-sifatida-foydalangan-zakovatning-kuzgi-mavsumi-beshinchi-oyinidan-reportaj">
+                                                    <div class="news-meta"><span>15:57</span></div>
+                                                    <span class="news-lenta__title"> АҚШ қамоқхоналарида маҳбуслар нимадан пул сифатида фойдаланган? – “Заковат”нинг кузги мавсуми бешинчи ўйинидан репортаж</span>
+                                                  </a>
+                                </div><br><br><b></b>
+                <a href="/news/list" class="main-btn-v2 w-100">Кўпроқ янгилик</a>
+            </div>
+            <div class="flex">
+                <div class="div1">
+                    <div class="col-md-6">
+                        <div class="small-news"><a class="small-news__img" href="/news/2023/11/03/uzauto-motors-ommabop-modellar-uchun-qoshimcha-kontraktatsiya-ochilganini-malum-qildi"><img src="https://storage.kun.uz/source/thumbnails/_medium/10/DtLlnYZFJIA33a8WomQLNKT5Xqg8UC7n_medium.jpg"></a>
+                        <div class="small-news__content">
+                        <div class="news-meta"><span>09:58 / 03.11.2023</span></div><a class="small-news__title" href="/news/2023/11/03/uzauto-motors-ommabop-modellar-uchun-qoshimcha-kontraktatsiya-ochilganini-malum-qildi">Фаластинга қўллов, Макроннинг ташрифи ва UzAuto'нинг пойабзалсиз қолган харидори — ҳафта дайжести</a>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="small-news"><a class="small-news__img" href="/news/2023/11/02/bmt-mulozimi-istefoga-chiqib-ochiq-xat-yozdi"><img src="https://storage.kun.uz/source/thumbnails/_medium/10/XxzxO0E8oEqMNhcr54-JfZLTWL-tWoNL_medium.jpg"></a>
+                        <div class="small-news__content">
+                        <div class="news-meta"><span>22:20 / 02.11.2023</span></div><a class="small-news__title" href="/news/2023/11/02/bmt-mulozimi-istefoga-chiqib-ochiq-xat-yozdi">Ўзбекистон-Франция алоқалари қай ҳолатда? Минтақа учун ушбу давлатнинг аҳамияти нимада?</a>
+                        </div>
+                        </div>
+                        </div>
+                </div>
+            <div class="div2">
+                <div class="col-md-6">
+                    <div class="small-news"><a class="small-news__img" href="/news/2023/11/02/gazoning-janubiy-qismiga-aviazarbalar-anklavning-xavfsiz-deyilgan-hududlari-ham-oqqa-tutilmoqda"><img src="https://storage.kun.uz/source/thumbnails/_medium/10/6SxOZfgA1lux3OJFvo_Ixb9UtdGAlF-h_medium.jpg"></a>
+                    <div class="small-news__content">
+                    <div class="news-meta"><span>20:26 / 02.11.2023</span></div><a class="small-news__title" href="/news/2023/11/02/gazoning-janubiy-qismiga-aviazarbalar-anklavning-xavfsiz-deyilgan-hududlari-ham-oqqa-tutilmoqda">2024 йил бюджети, долларнинг янги марраси ва хусусий секторга ўтадиган сув таъминоти — иқтисодий таймлайн</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="small-news"><a class="small-news__img" href="/news/2023/11/02/yillab-ota-onamni-korolmagan-paytlarim-bolgan-ozbek-qirgiz-chegarasida-vaziyat-qanday-ozgardi"><img src="https://storage.kun.uz/source/thumbnails/_medium/10/dEFBFxh5Xk8LSvHDPDTR9tkZ3W23LUJW_medium.jpg"></a>
+                    <div class="small-news__content">
+                    <div class="news-meta"><span>14:30 / 02.11.2023</span></div><a class="small-news__title" href="/news/2023/11/02/yillab-ota-onamni-korolmagan-paytlarim-bolgan-ozbek-qirgiz-chegarasida-vaziyat-qanday-ozgardi">“Aвтo 60 oй” ишида фуқароларга етказилган 12 млрд сўм зарар қопланмай қолгани маълум бўлди</a>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+                </div>
+                <div class="editor-choice">
+                    <div class="block-title"><a href="/news/list?f=selected"><span>Муҳаррир танлови</span></a><a class="link" href="/news/list?f=selected" style="position: relative; left: -370px; text-decoration: underline; color: #000;">Барчаси</a></div>
+            <div class="row">
+            
+            <div class="im">
+                <div class="col-md-4">
+                    <div class="news">
+                        
+                            
+                        <div class="news__img p-relative"><a href="/news/2023/10/27/mobil-qullik-bekor-qilindi-raqamni-saqlagan-holda-mobil-operatorni-qanday-ozgartirish-mumkin"><img src="https://storage.kun.uz/source/thumbnails/_medium/9/zb179t0EH85o2MoB-ktMM1urBQo83spc_medium.jpg"></a>
+                        </div>
+                        <div class="news-meta"><span>17:53 / 27.10.2023</span></div><a class="news__title" href="/news/2023/10/27/mobil-qullik-bekor-qilindi-raqamni-saqlagan-holda-mobil-operatorni-qanday-ozgartirish-mumkin">«Мобил қуллик» бекор қилинди. Рақамни сақлаган ҳолда мобил операторни қандай ўзгартириш мумкин?</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="news">
+                        <div class="news__img p-relative"><a href="/news/2023/10/23/advokatlar-erkinligini-cheklash-taklif-qilinmoqda-tashabbuskor-deyilgan-organning-ozi-bunga-qarshi-chiqdi"><img src="https://storage.kun.uz/source/thumbnails/_medium/9/N7NlLQcMILgMySJwoOilt5ipnslEHGg5_medium.jpg" style="height: 155px;"></a>
+                        </div>
+                        <div class="news-meta"><span>19:01 / 23.10.2023</span></div><a class="news__title" href="/news/2023/10/23/advokatlar-erkinligini-cheklash-taklif-qilinmoqda-tashabbuskor-deyilgan-organning-ozi-bunga-qarshi-chiqdi">Адвокатлар эркинлигини чеклаш таклиф қилинмоқда. Ташаббускор дейилган органнинг ўзи бунга қарши чиқди</a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="news">
+                        <div class="news__img p-relative"><a href="/news/2023/10/16/ozod-odamni-qamoqqa-tiqish-sanati-yoxud-sanksiya-olish-uchun-ermak-qilinayotgan-211-modda"><img src="https://storage.kun.uz/source/thumbnails/_medium/9/3K0VDGIyz-VAaljbNBYhgdljfui4COyW_medium.jpg"></a>
+                        </div>
+                        <div class="news-meta"><span>17:12 / 16.10.2023</span></div><a class="news__title" href="/news/2023/10/16/ozod-odamni-qamoqqa-tiqish-sanati-yoxud-sanksiya-olish-uchun-ermak-qilinayotgan-211-modda">Озод одамни қамоққа тиқиш “санъати” ёхуд санкция олиш учун эрмак қилинаётган 211-модда</a>
+                      </div>
+                    </div>
+                    
+              </div>
+                          </div>
+                  </div>
+                  <div class="home-page_section">
+                      <div class="big-picture">
+                          <div class="block-title"><a href="/news/list?f=selected"><span>Долзарб хабарлар</span></a></div>
+                          <img src="https://storage.kun.uz/source/thumbnails/_medium/10/YDIneECWbihAgyMhIIltbdJe2XifTDR1_medium.jpg" alt="">
+                          <div class="big-new__title">
+                              <a href="#" style="color: #000;">«Украинани Путин Россиясига айлантиришларини истамайман» – Арестович Украина президенти бўлмоқчи</a>
+                          </div>
+                          <div class="p"><p>Уруш даврида Украинанинг асосий спикери бўлган собиқ ҳарбий 2023 йил январида президент маъмуриятидан кетишга мажбур бўлганди. Ҳозирда у хорижда. У сайловчиларига Россия билан тинчлик таклиф қилмоқда.</p></div>
+                      </div>
+                      <div class="small-picture__section" style="display: flex;">
+                          <div class="top_picture" >
+                              <img src="https://storage.kun.uz/source/thumbnails/_medium/10/WTCia_eNfYD7EEd9vcNaSoQkpudo8b6B_medium.jpg" style="width: 300px;" alt=""><br>
+                              <div class="big-new__title2">
+                                  <a href="#" style="color: #000; width: 300px;">Тошкентда янги йўл ўтказгич танклар билан синаб кўрилди</a>
+                              </div>
+                              
+                          </div>
+                          <div class="top_picture t2" style="padding-left: 20px;">
+                              <img src="https://storage.kun.uz/source/thumbnails/_medium/10/o6kW3q6dCZOI53Myu7NRq3Ua5Q9Zx045_medium.jpg" style="width: 270px;" alt=""><br>
+                              <div class="big-new__title2">
+                                  <a href="#" style="color: #000; width: 300px;">
+                  
+                                      Яна бир юз йиллик уруш ёки сулҳ — Саудия Арабистони Исроил ва Фаластинни яраштириши мумкинми?</a>
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="small-picture__section" style="display: flex; position: relative; left: 590px; top: -255px;">
+                        <div class="top_picture t3" >
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/MBLmuLJ6WkqvhY7CrwpoLWu8nRRMt3Fp_medium.jpg" style="width: 300px;" alt=""><br>
+                            <div class="big-new__title2">
+                                <a href="#" style="color: #000; width: 300px;">Кооперативларга қарши курашга агроинспекция ва судлар ҳам қўшилди</a>
+                            </div>
+                            
+                        </div>
+                        <div class="top_picture t4" style="padding-left: 20px;">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/OSOAE0ETvKZPyDrADMyQGzXIjRV4t4cx_medium.jpg" style="width: 300px;" alt=""><br>
+                            <div class="big-new__title2">
+                                <a href="#" style="color: #000; width: 300px;">Фронтдаги вазият умидсиз эмас – Зеленский</a>
+                            </div>
+                            
+                        </div>
+                    </div>  
+                  
+                    </div>
+                    <div class="aside" style="width: 102%;height: 450px; position: relative; top: -750px; background-color:#f0f0f0; padding: 20px 0 0 0; margin: 30px 0;">
+                        <div class="block-title"><a href="/news/list?f=selected" style="position: relative; left: 10px;"><span>Интервю</span></a><a class="link" href="/news/list?f=selected" style="position: relative; left: 1000px; color: blue;">Интервю</a> <img src="https://kun.uz/assets/99110d40/img/blue-right-arrow.svg" style="position: relative; width: 50px; left: 1020px;" alt=""></div>
+                    
+                    <div class="x" style="display: grid; grid-template-columns:  1fr 1fr 1fr 1fr; position: relative; left: -50px; ">
+                        <div class="section_image">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/jbCvOt9xKXSlHkQ1RbPMEN0I3u5Vtt6I_medium.jpg" style=" z-index: 2;width: 250px; position: relative; left: 40px; top: -150px;" alt="">
+                            <span class="block-word">
+                                Интервю
+                            </span>
+                            <div class="ip-body">
+                                <div class="post-title">
+                                    Хоразмлик амалдорлар иши. Адолат қарор топдими? – ҳуқуқ фаоллари билан суҳбат
+                                </div>
+                            </div>
+                            <div class="white">
+                        
+                            </div>
+                        </div>
+                        <div class="section_image2">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/jbCvOt9xKXSlHkQ1RbPMEN0I3u5Vtt6I_medium.jpg" style=" z-index: 2;width: 250px; position: relative; left: 40px; top: -150px;" alt="">
+                            <span class="block-word2">
+                                Интервю
+                            </span>
+                            <div class="ip-body">
+                                <div class="post-title">
+                                    Хоразмлик амалдорлар иши. Адолат қарор топдими? – ҳуқуқ фаоллари билан суҳбат
+                                </div>
+                            </div>
+                            <div class="white">
+                        
+                            </div>
+                        </div>
+                        <div class="section_image3">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/jbCvOt9xKXSlHkQ1RbPMEN0I3u5Vtt6I_medium.jpg" style=" z-index: 2;width: 250px; position: relative; left: 40px; top: -150px;" alt="">
+                            <span class="block-word3">
+                                Интервю
+                            </span>
+                            <div class="ip-body">
+                                <div class="post-title">
+                                    Хоразмлик амалдорлар иши. Адолат қарор топдими? – ҳуқуқ фаоллари билан суҳбат
+                                </div>
+                            </div>
+                            <div class="white">
+                        
+                            </div>
+                        </div>
+                        <div class="section_image4">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/10/jbCvOt9xKXSlHkQ1RbPMEN0I3u5Vtt6I_medium.jpg" style=" z-index: 2;width: 250px; position: relative; left: 40px; top: -150px;" alt="">
+                    <span class="block-word4">
+                        Интервю
+                    </span>
+                    <div class="ip-body">
+                        <div class="post-title">
+                            Хоразмлик амалдорлар иши. Адолат қарор топдими? – ҳуқуқ фаоллари билан суҳбат
+                        </div>
+                    </div>
+                    <div class="white">
+                
+                    </div>
+                </div>
+            </div>
+            <div class="another-page" style="position: relative; top: -720px; margin: 0 50px;">
+                <div class="block-title"><a href="/news/list?f=selected"><span style="z-index: 3;position: relative; top: 400px;">ҲАМАС–Исроил уруши</span></a></div>
+              
+                   <div class="image-div" style="width: 500px;">
+                    <div class="div-ekan">
+            
+                    </div>
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/O3iwEJxJC1luGKrbtykjXIsyIjOorIyD_medium.jpg" style="width: 550px;" alt="">
+                    <br><br>
+                    <div class="page-title-p">
+                       <span  style=" position: relative;width: 100px; font-size: 22px; color: #000; font-weight: 700px; left: 20px;"> Сув, нон ва дори-дармон танқислиги: Ғазода фаластинликлар қандай кун кечиряпти?</span>
+                    </div>
+                   </div>
+                   <div class="two-image-div" style="float:right; width: 50%; position: relative; bottom: 350px;">
+                   <div class="flex-img" style="display: flex; position: relative; bottom: 403px;margin: 10xpx;padding-left: 10px; ">
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/ha4wXR2kFjLU4oj4PLy-oM-yX3UvhevX_medium.jpeg" style="width: 180px; padding-right: 20px;" alt="">
+                    <div class="image-describtion">
+                        <span><a href="#" style="position: relative;top: 15px; font-size: 20px; color: #000;">Исроил армияси ҲАМАС билан Ғазо марказида <br> жанг олиб бораётганини маълум қилди</a></span>
+                    </div>
+                   </div>
+                   <div class="flex-img" style="display: flex; position: relative; bottom: 403px; margin: 15px; ">
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/ZFdMLNKAveEQA4BHFN2z9aQaAai5K2rX_medium.jpg" style="width: 180px; padding-right: 20px;" alt="">
+                    <div class="image-describtion">
+                        <span><a href="#" style="position: relative;top: 15px; font-size: 20px; color: #000;">Яқин Шарқдаги урушнинг 1 ойлиги: хулосалар <br> ва кутилмалар</a></span>
+                    </div>
+                   </div>
+                   <div class="flex-img" style="display: flex; position: relative; bottom: 403px;  margin: 15px;">
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/7jnuZt_v2X7L-HBWJ9f3lLhnOA-pVwRk_medium.jpg" style="width: 180px; padding-right: 20px;" alt="">
+                    <div class="image-describtion">
+                        <span><a href="#" style="position: relative;top: 15px; font-size: 20px; color: #000;">БМТ: Ғазода ҳар 10 дақиқада бир бола ҳалок бўляпти</a></span>
+                    </div>
+                   </div>
+                   <div class="flex-img" style="display: flex; position: relative; bottom: 403px;  margin: 15px;">
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/ApXB51jx1oBcm0W0kuxbIVGtadJ5M234_medium.jpg" style="width: 180px; padding-right: 20px;" alt="">
+                    <div class="image-describtion">
+                        <span><a href="#" style="position: relative;top: 15px; font-size: 20px; color: #000;">БМТ агентликлари Яқин Шарқда ўт очишни тўхтатишга чақирди</a></span>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            <div class="maqolaa">
+                <div class="maqola">
+                    <h3 style="font-size: 25px; position: relative; bottom: 10px;">Мақолалар</h3>
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/Vn_tiSZSr2MSem6lAjBZBoqINMYj4ePB_medium.jpg" style="width: 380px;" alt="">
+                    <h2 style="line-height: 30px; font-size: 18px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                    <span style="line-height: 25px; position: relative; top: 20px; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> Туркия, Қозоғистон, Озарбайжон ва Қирзиғистон ҳамда кузатувчи мақомидаги <br> Туркманистон ва Венгрия давлатлари раҳбарлари иштирок этди.</span>
+                </div>
+                <div class="maqola">
+                    <h3 style="font-size: 25px; position: relative; bottom: 10px;">Мақолалар</h3>
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/ZK5depMhhihlAO_hVrK-TC2-3EqMJ99C_medium.jpg" style="width: 380px;" alt="">
+                    <h2 style="line-height: 30px; font-size: 18px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                    <span style="line-height: 25px; position: relative; top: 20px; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> Туркия, Қозоғистон, Озарбайжон ва Қирзиғистон ҳамда кузатувчи мақомидаги <br> Туркманистон ва Венгрия давлатлари раҳбарлари иштирок этди.</span>
+                </div>
+                <div class="maqola">
+                    <h3 style="font-size: 25px; position: relative; bottom: 10px;">Мақолалар</h3>
+                    <img src="https://storage.kun.uz/source/thumbnails/_medium/10/XxzxO0E8oEqMNhcr54-JfZLTWL-tWoNL_medium.jpg" style="width: 380px;" alt="">
+                    <h2 style="line-height: 30px; font-size: 18px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                    <span style="line-height: 25px; position: relative; top: 20px; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> Туркия, Қозоғистон, Озарбайжон ва Қирзиғистон ҳамда кузатувчи мақомидаги <br> Туркманистон ва Венгрия давлатлари раҳбарлари иштирок этди.</span>
+                </div>
+            </div>
+            <div class="vv">
+                <div class="maqolaa">
+                    <div class="maqola">
+                        <!-- <h3 style="font-size: 25px; position: relative; top: 40px;">Мақолалар</h3> -->
+                        <img src="https://storage.kun.uz/source/thumbnails/_medium/10/9deGVAVbhfhPvEPNV7WSOAp1VeKakuBT_medium.jpg" style="width: 380px;  position: relative; top: 50px;" alt="">
+                        <h2 style="line-height: 30px; font-size: 18px;  position: relative; top: 60px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                        <span style="line-height: 25px; position: relative; top: 70px; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> Туркманистон ва Венгрия давлатлари раҳбарлари иштирок этди.</span>
+                    </div>
+                    <div class="maqola">
+                        <!-- <h3 style="font-size: 25px; position: relative;top: 40px;">Мақолалар</h3> -->
+                        <img src="https://storage.kun.uz/source/thumbnails/_medium/10/kGo_3bvdyopxNj-oYyv0rVsHmgeefX8c_medium.jpg" style="width: 380px;  position: relative; top: 50px; height: 214px;" alt="">
+                        <h2 style="line-height: 30px; font-size: 18px;  position: relative; top: 60px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                        <!-- .wp-block-image:not(figure) {
+                            margin: 0;
+                        }
+            
+                        .wp-block-image figcaption {
+                            margin-bottom: 0;
+                        }
+            
+                        .wp-block-quote {
+                            border-left: 3px solid var(--c-contrast-150);
+                        }
+            
+                        .wp-block-quote.is-style-large {
+                            border-left: 0;
+                        }
+            
+                        .wp-block-quote.is-style-large p {
+                            font-size: 1.4em;
+                        }
+            
+                        .wp-block-quote.is-style-large cite {
+                            font-size: max(13px,.85em);
+                        }
+            
+                        .wp-block-pullquote {
+                            margin: calc(var(--post-content-gaps) + .3em) auto;
+                            padding: 0;
+                            padding-left: 62px;
+                            font-size: 1.4em;
+                            font-weight: 600;
+                            font-style: normal;
+                            text-align: left;
+                            line-height: 1.5;
+                            color: var(--c-contrast-850);
+                        }
+            
+                        .wp-block-pullquote blockquote {
+                            position: relative;
+                            margin: 0;
+                            padding: 0;
+                            font: inherit;
+                            font-weight: inherit;
+                            line-height: inherit;
+                        }
+            
+                        .wp-block-pullquote blockquote:not(.has-text-color) {
+                            color: inherit;
+                        }
+            
+                        .wp-block-pullquote blockquote:before {
+                            content: "“";
+                            position: absolute;
+                            top: 0;
+                            margin-left: -.32em;
+                            color: var(--c-main);
+                            opacity: .5;
+                            transform: translateX(-100%) translateY(68%) rotate(1deg);
+                            font-size: 3em;
+                            line-height: .41;
+                            font-family: Georgia,Arial,sans-serif;
+                            font-style: normal;
+                            font-weight: 600;
+                        }
+            
+                        .wp-block-pullquote blockquote p {
+                            font-size: inherit;
+                            line-height: inherit;
+                        }
+            
+                        .wp-block-pullquote blockquote cite {
+                            font-size: max(12px,.56em);
+                            letter-spacing: .02em;
+                            font-weight: 500;
+                        }
+            
+                        .wp-block-pullquote.alignleft,.wp-block-pullquote.alignright {
+                            padding-top: .15em;
+                            padding-bottom: 1em;
+                            max-width: 40%;
+                        }
+            
+                        .wp-block-pullquote.alignleft p,.wp-block-pullquote.alignright p {
+                            font-size: inherit;
+                        }
+            
+                        @media (max-width: 767px) {
+                            .wp-block-pullquote.alignleft,.wp-block-pullquote.alignright {
+                                width:100%;
+                                max-width: initial;
+                                margin: 0 !important;
+                                margin-top: 2em;
+                                margin-bottom: 2em;
+                                padding-left: 0;
+                                padding-right: 0;
+                            }
+                        }
+            
+                        .wp-block-pullquote.alignleft.is-style-default,.wp-block-pullquote.alignright.is-style-default {
+                            padding-left: 48px;
+                            font-size: 1.2em;
+                        }
+            
+                        .wp-block-pullquote.alignleft {
+                            margin-right: 5%;
+                        }
+            
+                        .wp-block-pullquote cite,.wp-block-pullquote .wp-block-pullquote__citation,.wp-block-pullquote p + cite {
+                            margin-top: 20px;
+                            color: var(--c-contrast-400);
+                            font-style: normal;
+                        }
+            
+                        .wp-block-separator {
+                            color: var(--c-separator2);
+                            border-color: currentColor;
+                            border-top-width: 0;
+                            background: none;
+                        }
+            
+                        .wp-block-separator:not(.is-style-wide) {
+                            border-top-width: 1px;
+                            margin: 2.8em auto;
+                            max-width: 180px;
+                        } -->
+                        <span style="line-height: 25px; position: relative; top: 7cqi; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> </span>
+                    </div>
+                    <div class="maqola">
+                        <!-- <h3 style="font-size: 25px; position: relative; top:40px ;">Мақолалар</h3> -->
+                        <img src="https://storage.kun.uz/source/thumbnails/_medium/9/5u3YZKgvcyoO5-0eRqNacGp3c9dDc7HR_medium.jpg" style="width: 380px;  position: relative; top: 50px; height: 214px;" alt="">
+                        <h2 style="line-height: 30px; font-size: 18px; position: relative; top: 60px;">Ўзбекистон Туркий Давлатлар Ташкилотидан <br> нималар кутмоқда?</h2>
+                        <span style="line-height: 25px; position: relative; top: 70px; font-size: 15px;">3 ноябр куни қўшни Қозоғистонда Туркий Давлатлар Ташкилотининг <br> 10-саммити бўлиб ўтди. Унда ташкилотга аъзо беш давлат – Ўзбекистон,<br> </span>
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+</body>
+</html>
+
+                                                 
